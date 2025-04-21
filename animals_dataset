@@ -1,3 +1,6 @@
+Prompt: This is an animal attributes dataset. I have a hidden car in mind. You are allowed to ask me binary questions about the hidden car's attributes, for you to figure out the hidden animal. 
+After receiving an answer, at each step, you must print what your current belief distribution is, about the possible hidden animal.
+
 animals = {
     "cat": {
         "mammal": True,
@@ -240,6 +243,3 @@ animals = {
         "lays_eggs": True
     }
 }
-
-This is an animal attributes dataset. I have a hidden car in mind. You are allowed to ask me binary questions about the hidden car's attributes, in order for you to figure out the hidden car. 
-After receiving an answer, at each step, you must print what your current belief distribution is, about the possible hidden car.
