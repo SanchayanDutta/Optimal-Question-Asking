@@ -1,3 +1,7 @@
+Prompt: This is a places attributes dataset. I have a hidden place in mind. You are allowed to ask me binary questions about the hidden place's attributes, for you to figure out the hidden place. 
+After receiving an answer, at each step, you must print what your current belief distribution is, about the possible hidden place.
+
+
 places = {
     "Paris": {
         "city": True,
