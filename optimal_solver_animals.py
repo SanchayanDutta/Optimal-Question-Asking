@@ -1758,7 +1758,7 @@ if __name__ == "__main__":
     decision_tree = build_decision_tree(all_animals, animals)
 
     # Example usage: pick a hidden animal
-    hidden = "guinea_pig"
+    hidden = "hamster"
 
     print("---- Decision Tree Query ----")
     final_candidates = ask_question(decision_tree, hidden)
