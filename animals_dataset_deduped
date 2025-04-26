@@ -1,4 +1,4 @@
-anms = {
+animals = {
  'aardvark': {'mammal': True,
   'bird': False,
   'reptile': False,
