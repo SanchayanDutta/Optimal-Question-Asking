@@ -1,3 +1,7 @@
+Prompt: This is a places attributes dataset. I have a hidden place in mind. You are allowed to ask me binary questions about the hidden place's attributes, for you to figure out the hidden place.
+After receiving an answer, at each step, you must print what your current belief distribution is and the calculated entropy drop, about the possible hidden place.
+We can stop when there are no more distinguishing attributes between the leftover options. You're not allowed to solve this using programming.
+
 places = {
     'Amazon Rainforest': {
         'city': False,
