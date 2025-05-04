@@ -82,7 +82,7 @@ def expected_cost(tree, possible_items, data):
 def ask_question(tree, hidden_item, possible_items, data):
     """
     Walk the tree, printing each question, its answer and
-    the entropy drop achieved by that question.
+    both the entropy drop and the remaining candidate count.
     """
     if tree["type"] == "leaf":
         candidates = tree["items"]
@@ -107,13 +107,13 @@ def ask_question(tree, hidden_item, possible_items, data):
     info_gain = h_before - h_after
 
     print(f"Question: Is it '{attr}'?  Answer: {answer}")
-    print(f"  Entropy drop: {info_gain:.3f} bits\n")
+    print(f"  Entropy drop: {info_gain:.3f} bits")
+    print(f"  Remaining candidates: {len(next_set)}\n")   # <- new line
 
     return ask_question(tree["yes"] if answer else tree["no"],
                         hidden_item,
                         next_set,
                         data)
-
 
 # ---------- Demo ----------
 
