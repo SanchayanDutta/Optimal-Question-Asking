@@ -81,8 +81,8 @@ def expected_cost(tree, possible_items, data):
 
 def ask_question(tree, hidden_item, possible_items, data):
     """
-    Walk the tree, printing each question, its answer and
-    the entropy drop achieved by that question.
+    Walk the tree, printing each question, its answer,
+    the entropy drop and the remaining candidate count.
     """
     if tree["type"] == "leaf":
         candidates = tree["items"]
@@ -98,22 +98,24 @@ def ask_question(tree, hidden_item, possible_items, data):
     yes_set = {i for i in possible_items if data[i][attr]}
     no_set = possible_items - yes_set
 
-    answer = data[hidden_item][attr]
+    answer   = data[hidden_item][attr]
     next_set = yes_set if answer else no_set
 
     # Information gain
-    h_before = math.log2(len(possible_items))
-    h_after = math.log2(len(next_set)) if next_set else 0.0
+    h_before  = math.log2(len(possible_items))
+    h_after   = math.log2(len(next_set)) if next_set else 0.0
     info_gain = h_before - h_after
 
     print(f"Question: Is it '{attr}'?  Answer: {answer}")
-    print(f"  Entropy drop: {info_gain:.3f} bits\n")
+    print(f"  Entropy drop: {info_gain:.3f} bits")
+    print(f"  Remaining candidates: {len(next_set)}\n")   # new line
 
-    return ask_question(tree["yes"] if answer else tree["no"],
-                        hidden_item,
-                        next_set,
-                        data)
-
+    return ask_question(
+        tree["yes"] if answer else tree["no"],
+        hidden_item,
+        next_set,
+        data,
+    )
 
 # ---------- Demo ----------
 
@@ -122,7 +124,7 @@ if __name__ == "__main__":
     all_places = set(places.keys())
     decision_tree = build_decision_tree(all_places, places)
 
-    hidden = "Rome"     # choose any key from the 'places' dict
+    hidden = "Mount Kilimanjaro"     # choose any key from the 'places' dict
 
     print("---- Decision Tree Query ----\n")
     final_candidates = ask_question(decision_tree, hidden, all_places, places)
