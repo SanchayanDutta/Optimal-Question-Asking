@@ -83,8 +83,8 @@ def compute_expected_cost(tree, possible_cars):
 
 def ask_question(tree, hidden_car, possible_cars):
     """
-    Traverse the tree, printing each question, its answer and
-    the entropy drop (information gain) achieved by that question.
+    Traverse the tree, printing each question, its answer,
+    the entropy drop and the remaining candidate count.
     """
     if tree["type"] == "leaf":
         candidates = tree["cars"]
@@ -105,23 +105,24 @@ def ask_question(tree, hidden_car, possible_cars):
 
     # Entropy before and after the question
     h_before = math.log2(len(possible_cars))
-    h_after = math.log2(len(next_set)) if next_set else 0.0
+    h_after  = math.log2(len(next_set)) if next_set else 0.0
     info_gain = h_before - h_after
 
     print(f"Question: Is it '{attr}'?  Answer: {answer}")
-    print(f"  Entropy drop: {info_gain:.3f} bits\n")
+    print(f"  Entropy drop: {info_gain:.3f} bits")
+    print(f"  Remaining candidates: {len(next_set)}\n")   # new line
 
-    if answer:
-        return ask_question(tree["yes"], hidden_car, yes_set)
-    else:
-        return ask_question(tree["no"], hidden_car, no_set)
-
+    return ask_question(
+        tree["yes"] if answer else tree["no"],
+        hidden_car,
+        next_set
+    )
 
 if __name__ == "__main__":
     all_cars = set(cars.keys())
     decision_tree = build_decision_tree(all_cars, cars)
 
-    hidden = "Tesla Model 3"  # change as you like
+    hidden = "Mini Cooper"  # change as you like
 
     print("---- Decision Tree Query ----\n")
     final_candidates = ask_question(decision_tree, hidden, all_cars)
