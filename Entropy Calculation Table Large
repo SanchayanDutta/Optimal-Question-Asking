@@ -12,22 +12,24 @@ Oracle: 100, 51, 21, 9, 6, 1
 
 **Cars**
 
-GPT o3: 
+GPT o3: 100, 60, 30, 14, 6, 3, 1
 
-Gemini 2.5 Pro:
+Gemini 2.5 Pro: 100, 80, 39, 19, 10, 4, 2, 1
 
-Claude 3.7:
+Claude 3.7: 100, 62, 24, 5, 3, 2, 1
 
-Grok:
+Grok: 100, 94, 23, 14, 8, 4, 2, 1
 
-Oracle:
+Oracle: 100, 53, 31, 15, 7, 4, 2, 1
 
 **Places**
 
-GPT o3:
+GPT o3: 100, 57, 24, 11, 7, 4, 2, 1
 
-Gemini 2.5 Pro:
+Gemini 2.5 Pro: 100, 46, 25, 14, 6, 2, 1
 
-Claude 3.7:
+Claude 3.7: 100, 70, 28, 22, 10, 1
 
-Oracle:
+Grok: 100, 57, 36, 27, 11, 5, 2, 1
+
+Oracle: 100, 54, 26, 12, 3, 1
