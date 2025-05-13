@@ -1,1 +1,1 @@
-# Query-Optimality-of-LLMs
+Optimal-Question-Asking
