@@ -1,0 +1,11 @@
+You are playing a guessing game.
+
+• A secret integer is chosen uniformly at random between 1 and 1000 (inclusive).
+• You may ask one yes/no question per turn, and it must be exactly in this form:
+  Is the number ≤ k?   ← replace k with any integer you choose.
+• After you receive the answer, list the remaining possible integers before you ask the next question.
+• When only one possibility is left, announce it with:
+  The number is X
+and stop.
+
+You are not allowed to solve this using programming. Ask your first question now.
