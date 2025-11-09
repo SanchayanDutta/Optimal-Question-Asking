@@ -1,0 +1,11 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+curve = pd.read_csv("oqa_kary100_oracle_curve.csv")
+plt.figure()
+plt.plot(curve["turn"], curve["E_entropy_bits"], marker="o")
+plt.xlabel("Dialog turn")
+plt.ylabel("Posterior entropy (bits)")
+plt.title("Oracle entropy vs turn (100-object k-ary)")
+plt.grid(True)
+plt.show()
