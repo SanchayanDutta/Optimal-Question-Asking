@@ -1,0 +1,1057 @@
+{
+  "type": "node",
+  "attribute": "color",
+  "children": {
+    "blue": {
+      "type": "node",
+      "attribute": "size",
+      "children": {
+        "L": {
+          "type": "node",
+          "attribute": "use_case",
+          "children": {
+            "stationary": {
+              "type": "leaf",
+              "candidates": [
+                "0000"
+              ],
+              "depth": 3
+            },
+            "wearable": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "electric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0010"
+                  ],
+                  "depth": 4
+                },
+                "manual": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0057"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "indoor": {
+              "type": "leaf",
+              "candidates": [
+                "001d"
+              ],
+              "depth": 3
+            },
+            "outdoor": {
+              "type": "leaf",
+              "candidates": [
+                "005c"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "M": {
+          "type": "node",
+          "attribute": "origin",
+          "children": {
+            "rural": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "manual": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0001"
+                  ],
+                  "depth": 4
+                },
+                "electric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0038"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "coastal": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "electric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "001b"
+                  ],
+                  "depth": 4
+                },
+                "manual": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0023"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "urban": {
+              "type": "node",
+              "attribute": "pattern",
+              "children": {
+                "striped": {
+                  "type": "leaf",
+                  "candidates": [
+                    "002e"
+                  ],
+                  "depth": 4
+                },
+                "dotted": {
+                  "type": "leaf",
+                  "candidates": [
+                    "004f"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "S": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "electric": {
+              "type": "leaf",
+              "candidates": [
+                "000c"
+              ],
+              "depth": 3
+            },
+            "manual": {
+              "type": "leaf",
+              "candidates": [
+                "003e"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "XS": {
+          "type": "leaf",
+          "candidates": [
+            "0019"
+          ],
+          "depth": 2
+        },
+        "XL": {
+          "type": "node",
+          "attribute": "shape",
+          "children": {
+            "circle": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "metal": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0020"
+                  ],
+                  "depth": 4
+                },
+                "fabric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "003a"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "hexagon": {
+              "type": "leaf",
+              "candidates": [
+                "0025"
+              ],
+              "depth": 3
+            },
+            "triangle": {
+              "type": "node",
+              "attribute": "pattern",
+              "children": {
+                "striped": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0034"
+                  ],
+                  "depth": 4
+                },
+                "solid": {
+                  "type": "leaf",
+                  "candidates": [
+                    "003f"
+                  ],
+                  "depth": 4
+                },
+                "dotted": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0042"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "square": {
+              "type": "leaf",
+              "candidates": [
+                "0039"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        }
+      },
+      "depth": 1
+    },
+    "yellow": {
+      "type": "node",
+      "attribute": "size",
+      "children": {
+        "M": {
+          "type": "node",
+          "attribute": "pattern",
+          "children": {
+            "striped": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "fabric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0002"
+                  ],
+                  "depth": 4
+                },
+                "plastic": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0051"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "plaid": {
+              "type": "leaf",
+              "candidates": [
+                "0041"
+              ],
+              "depth": 3
+            },
+            "solid": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "electric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0056"
+                  ],
+                  "depth": 4
+                },
+                "solar": {
+                  "type": "leaf",
+                  "candidates": [
+                    "005f"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "dotted": {
+              "type": "leaf",
+              "candidates": [
+                "005e"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "XL": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "solar": {
+              "type": "leaf",
+              "candidates": [
+                "0005"
+              ],
+              "depth": 3
+            },
+            "manual": {
+              "type": "node",
+              "attribute": "origin",
+              "children": {
+                "mountain": {
+                  "type": "leaf",
+                  "candidates": [
+                    "002d"
+                  ],
+                  "depth": 4
+                },
+                "urban": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0049"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "XS": {
+          "type": "node",
+          "attribute": "pattern",
+          "children": {
+            "solid": {
+              "type": "leaf",
+              "candidates": [
+                "000e"
+              ],
+              "depth": 3
+            },
+            "dotted": {
+              "type": "leaf",
+              "candidates": [
+                "004b"
+              ],
+              "depth": 3
+            },
+            "striped": {
+              "type": "leaf",
+              "candidates": [
+                "0058"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "S": {
+          "type": "node",
+          "attribute": "pattern",
+          "children": {
+            "solid": {
+              "type": "leaf",
+              "candidates": [
+                "0016"
+              ],
+              "depth": 3
+            },
+            "dotted": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "glass": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0040"
+                  ],
+                  "depth": 4
+                },
+                "fabric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "004d"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "striped": {
+              "type": "leaf",
+              "candidates": [
+                "0060"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "L": {
+          "type": "node",
+          "attribute": "material",
+          "children": {
+            "glass": {
+              "type": "node",
+              "attribute": "origin",
+              "children": {
+                "coastal": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0018"
+                  ],
+                  "depth": 4
+                },
+                "urban": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0030"
+                  ],
+                  "depth": 4
+                },
+                "rural": {
+                  "type": "leaf",
+                  "candidates": [
+                    "004c"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "fabric": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "solar": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0024"
+                  ],
+                  "depth": 4
+                },
+                "manual": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0035"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "wood": {
+              "type": "leaf",
+              "candidates": [
+                "003c"
+              ],
+              "depth": 3
+            },
+            "plastic": {
+              "type": "leaf",
+              "candidates": [
+                "0045"
+              ],
+              "depth": 3
+            },
+            "metal": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "electric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0047"
+                  ],
+                  "depth": 4
+                },
+                "solar": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0055"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            }
+          },
+          "depth": 2
+        }
+      },
+      "depth": 1
+    },
+    "black": {
+      "type": "node",
+      "attribute": "size",
+      "children": {
+        "S": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "electric": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "plastic": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0003"
+                  ],
+                  "depth": 4
+                },
+                "fabric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0007"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "manual": {
+              "type": "leaf",
+              "candidates": [
+                "0012"
+              ],
+              "depth": 3
+            },
+            "solar": {
+              "type": "leaf",
+              "candidates": [
+                "0036"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "XS": {
+          "type": "node",
+          "attribute": "origin",
+          "children": {
+            "mountain": {
+              "type": "leaf",
+              "candidates": [
+                "0008"
+              ],
+              "depth": 3
+            },
+            "coastal": {
+              "type": "leaf",
+              "candidates": [
+                "003b"
+              ],
+              "depth": 3
+            },
+            "rural": {
+              "type": "leaf",
+              "candidates": [
+                "004a"
+              ],
+              "depth": 3
+            },
+            "urban": {
+              "type": "leaf",
+              "candidates": [
+                "004e"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "M": {
+          "type": "node",
+          "attribute": "material",
+          "children": {
+            "plastic": {
+              "type": "leaf",
+              "candidates": [
+                "000a"
+              ],
+              "depth": 3
+            },
+            "glass": {
+              "type": "leaf",
+              "candidates": [
+                "002a"
+              ],
+              "depth": 3
+            },
+            "metal": {
+              "type": "leaf",
+              "candidates": [
+                "0054"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "XL": {
+          "type": "node",
+          "attribute": "pattern",
+          "children": {
+            "plaid": {
+              "type": "leaf",
+              "candidates": [
+                "000b"
+              ],
+              "depth": 3
+            },
+            "dotted": {
+              "type": "leaf",
+              "candidates": [
+                "0044"
+              ],
+              "depth": 3
+            },
+            "solid": {
+              "type": "leaf",
+              "candidates": [
+                "0059"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "L": {
+          "type": "node",
+          "attribute": "material",
+          "children": {
+            "glass": {
+              "type": "node",
+              "attribute": "origin",
+              "children": {
+                "mountain": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0013"
+                  ],
+                  "depth": 4
+                },
+                "urban": {
+                  "type": "leaf",
+                  "candidates": [
+                    "002b"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "metal": {
+              "type": "leaf",
+              "candidates": [
+                "0022"
+              ],
+              "depth": 3
+            },
+            "wood": {
+              "type": "leaf",
+              "candidates": [
+                "0026"
+              ],
+              "depth": 3
+            },
+            "plastic": {
+              "type": "leaf",
+              "candidates": [
+                "0050"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        }
+      },
+      "depth": 1
+    },
+    "red": {
+      "type": "node",
+      "attribute": "size",
+      "children": {
+        "S": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "manual": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "metal": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0004"
+                  ],
+                  "depth": 4
+                },
+                "fabric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "000d"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "solar": {
+              "type": "leaf",
+              "candidates": [
+                "0021"
+              ],
+              "depth": 3
+            },
+            "electric": {
+              "type": "leaf",
+              "candidates": [
+                "0062"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "XL": {
+          "type": "node",
+          "attribute": "use_case",
+          "children": {
+            "stationary": {
+              "type": "leaf",
+              "candidates": [
+                "0009"
+              ],
+              "depth": 3
+            },
+            "outdoor": {
+              "type": "leaf",
+              "candidates": [
+                "001e"
+              ],
+              "depth": 3
+            },
+            "wearable": {
+              "type": "leaf",
+              "candidates": [
+                "0032"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "M": {
+          "type": "node",
+          "attribute": "material",
+          "children": {
+            "wood": {
+              "type": "leaf",
+              "candidates": [
+                "0015"
+              ],
+              "depth": 3
+            },
+            "fabric": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "solar": {
+                  "type": "leaf",
+                  "candidates": [
+                    "001a"
+                  ],
+                  "depth": 4
+                },
+                "electric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0052"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "plastic": {
+              "type": "leaf",
+              "candidates": [
+                "0029"
+              ],
+              "depth": 3
+            },
+            "glass": {
+              "type": "node",
+              "attribute": "energy",
+              "children": {
+                "solar": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0031"
+                  ],
+                  "depth": 4
+                },
+                "electric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0053"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "XS": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "manual": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "glass": {
+                  "type": "leaf",
+                  "candidates": [
+                    "002c"
+                  ],
+                  "depth": 4
+                },
+                "metal": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0061"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "electric": {
+              "type": "leaf",
+              "candidates": [
+                "002f"
+              ],
+              "depth": 3
+            },
+            "solar": {
+              "type": "leaf",
+              "candidates": [
+                "005b"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "L": {
+          "type": "leaf",
+          "candidates": [
+            "003d"
+          ],
+          "depth": 2
+        }
+      },
+      "depth": 1
+    },
+    "green": {
+      "type": "node",
+      "attribute": "shape",
+      "children": {
+        "square": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "manual": {
+              "type": "node",
+              "attribute": "origin",
+              "children": {
+                "urban": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0006"
+                  ],
+                  "depth": 4
+                },
+                "rural": {
+                  "type": "leaf",
+                  "candidates": [
+                    "000f"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "solar": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "plastic": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0011"
+                  ],
+                  "depth": 4
+                },
+                "fabric": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0046"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "electric": {
+              "type": "leaf",
+              "candidates": [
+                "001c"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "triangle": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "solar": {
+              "type": "leaf",
+              "candidates": [
+                "0014"
+              ],
+              "depth": 3
+            },
+            "electric": {
+              "type": "leaf",
+              "candidates": [
+                "0027"
+              ],
+              "depth": 3
+            },
+            "manual": {
+              "type": "node",
+              "attribute": "material",
+              "children": {
+                "plastic": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0037"
+                  ],
+                  "depth": 4
+                },
+                "metal": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0048"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "circle": {
+          "type": "node",
+          "attribute": "material",
+          "children": {
+            "metal": {
+              "type": "leaf",
+              "candidates": [
+                "0017"
+              ],
+              "depth": 3
+            },
+            "wood": {
+              "type": "node",
+              "attribute": "origin",
+              "children": {
+                "rural": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0028"
+                  ],
+                  "depth": 4
+                },
+                "coastal": {
+                  "type": "leaf",
+                  "candidates": [
+                    "0033"
+                  ],
+                  "depth": 4
+                }
+              },
+              "depth": 3
+            },
+            "plastic": {
+              "type": "leaf",
+              "candidates": [
+                "0043"
+              ],
+              "depth": 3
+            },
+            "fabric": {
+              "type": "leaf",
+              "candidates": [
+                "0063"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        },
+        "hexagon": {
+          "type": "node",
+          "attribute": "energy",
+          "children": {
+            "manual": {
+              "type": "leaf",
+              "candidates": [
+                "001f"
+              ],
+              "depth": 3
+            },
+            "electric": {
+              "type": "leaf",
+              "candidates": [
+                "005a"
+              ],
+              "depth": 3
+            },
+            "solar": {
+              "type": "leaf",
+              "candidates": [
+                "005d"
+              ],
+              "depth": 3
+            }
+          },
+          "depth": 2
+        }
+      },
+      "depth": 1
+    }
+  },
+  "depth": 0
+}

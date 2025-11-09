@@ -1,0 +1,42 @@
+You are playing a guessing game over a 100-object dataset. There is a hidden object.
+Your goal is to reduce uncertainty by asking exactly one question per turn.
+
+DATASET SCHEMA (allowed values per attribute):
+- color:    {red, blue, green, yellow, black}
+- shape:    {circle, square, triangle, hexagon}
+- material: {wood, metal, plastic, fabric, glass}
+- size:     {XS, S, M, L, XL}
+- pattern:  {solid, striped, dotted, plaid}
+- origin:   {urban, rural, coastal, mountain}
+- use_case: {indoor, outdoor, wearable, stationary}
+- energy:   {manual, electric, solar}
+
+Action space:
+- Ask a multiway categorical question of the form: ask(<ATTRIBUTE>)
+  I will reply with exactly one value from that attribute’s allowed set for the hidden object.
+
+Protocol:
+- One question per turn.
+- After my answer, you MUST update and print your belief over the current candidate set.
+- Stop as soon as only one candidate remains (or one equivalence class if multiple candidates are identical on all attributes).
+- No external tools, no browsing, no code execution.
+
+Output format each turn (single fenced JSON block, no extra prose before or after):
+```json
+{
+  "thought": "<1-2 short sentences about how the answer changes your plan>",
+  "action": {"type": "ask", "attribute": "<one of: color|shape|material|size|pattern|origin|use_case|energy>"},
+  "belief": [
+    {"id": "<candidate_id_1>", "p": <float>},
+    {"id": "<candidate_id_2>", "p": <float>}
+    // ... include every candidate I list for you, normalized to sum to 1
+  ]
+}
+```
+
+Environment:
+- At the start of each turn I will print the CURRENT CANDIDATE SET (the list of object ids).
+- You will choose ONE attribute to query via the "action" field.
+- I will answer with the value of that attribute for the hidden object.
+- You will then return the JSON block above with your updated belief.
+- Terminate when your belief puts all mass on a single remaining candidate (or an equivalence class).
