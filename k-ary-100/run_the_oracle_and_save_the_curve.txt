@@ -1,0 +1,4 @@
+!python -u oqa_kary_oracle_dp.py \
+  --dataset oqa_kary100_dataset.json \
+  --save_tree oqa_kary100_opt_tree.json \
+  --curve_csv oqa_kary100_oracle_curve.csv
