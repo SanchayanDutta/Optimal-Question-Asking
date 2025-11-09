@@ -1,61 +1,18 @@
-
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Oracle for k-ary Optimal Question Asking (OQA) with dynamic programming.
+# Exact k-ary oracle via dynamic programming + per-turn curves.
+# Dataset format: JSON mapping id -> {attr: value, ...}
 
-Given a finite set of objects labeled by multi-valued categorical attributes,
-this program computes the minimal expected number of queries (under a uniform prior)
-needed to identify the hidden object when each query reveals the exact value of a
-chosen attribute. It also supports exporting the optimal decision tree.
-
-This is the k-ary generalization of the binary oracle in Eq. (6)–(7) and Algorithm 1,
-where a split can have m>2 branches (one per attribute value that appears in the
-current candidate set).
-
-Usage
------
-python oqa_kary_oracle_dp.py --dataset /path/to/oqa_kary100_dataset.json
-# optional flags:
-#   --schema /path/to/schema.json
-#   --save_tree /path/to/tree.json
-
-Output
-------
-Prints the optimal expected number of queries to stdout. If --save_tree is given,
-also writes a JSON with the optimal decision tree.
-
-Notes
------
-- Uniform prior over the candidate set is assumed.
-- Observations are deterministic and noiseless.
-- Each attribute need only be asked at most once, because a single k-ary query
-  reveals its exact value; re-asking cannot further split the candidate set.
-
-Complexity
-----------
-Let N be the number of objects and d the number of attributes. The DP caches by
-reachable candidate subsets (represented as bitmasks), so the practical runtime
-depends on how many distinct intersections of attribute-value buckets occur in the
-dataset. For the 25- and 100-object tiers used in OQA, this is typically tractable.
-
-Author: OQA k-ary oracle (DP)
-"""
-
-import argparse
-import json
+import argparse, json, math
 from functools import lru_cache
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Any, Tuple
 
-# ------------------ Utilities ------------------
+# ---------------- Utilities ----------------
 
-def bit_count(x: int) -> int:
+def bitcount(x: int) -> int:
     return x.bit_count()
 
 def ids_from_mask(mask: int, index2id: List[str]) -> List[str]:
-    """Return object ids whose bit is 1 in mask."""
-    out = []
-    i = 0
+    out, i = [], 0
     while mask:
         if mask & 1:
             out.append(index2id[i])
@@ -63,123 +20,180 @@ def ids_from_mask(mask: int, index2id: List[str]) -> List[str]:
         i += 1
     return out
 
-# ------------------ Oracle ------------------
+# ---------------- Oracle ----------------
 
 class KaryOracleDP:
+    """
+    Oracle for multi-valued (k-ary) attributes.
+    Assumptions: uniform prior over objects, noiseless answers.
+    """
     def __init__(self, objects: Dict[str, Dict[str, str]]):
-        """
-        objects: mapping id -> {attr: value}
-        """
         self.ids = sorted(objects.keys())
         self.n = len(self.ids)
-        self.attrs = sorted({a for obj in objects.values() for a in obj.keys()})
-        # values per attribute that actually appear
-        self.attr_values = {a: sorted({objects[i].get(a) for i in self.ids}) for a in self.attrs}
+        self.attrs = sorted({a for o in objects.values() for a in o.keys()})
+        self.attr_vals = {a: sorted({objects[i].get(a) for i in self.ids}) for a in self.attrs}
 
-        # map id->index and precompute masks for every (attr, value)
-        self.id2index = {oid: k for k, oid in enumerate(self.ids)}
-        self.index2id = self.ids[:]  # same order
+        self.id2idx = {oid: k for k, oid in enumerate(self.ids)}
+        self.idx2id = self.ids[:]
 
+        # Precompute bitmasks for every (attr, value)
         self.mask_by_attr_val: Dict[str, Dict[str, int]] = {a: {} for a in self.attrs}
         for a in self.attrs:
-            for v in self.attr_values[a]:
+            for v in self.attr_vals[a]:
                 m = 0
                 for oid in self.ids:
                     if objects[oid].get(a) == v:
-                        m |= (1 << self.id2index[oid])
+                        m |= 1 << self.id2idx[oid]
                 self.mask_by_attr_val[a][v] = m
 
-        # root mask is all ones
-        self.root_mask = (1 << self.n) - 1
-
-        # will hold argmins for tree reconstruction
+        self.root = (1 << self.n) - 1
         self._best_attr: Dict[int, str] = {}
 
-    def _children_for_attr(self, S: int, a: str) -> List[int]:
-        """Return non-empty child masks when splitting S by attribute a."""
-        children = []
+    # Split S into non-empty proper children for attribute a
+    def _children(self, S: int, a: str) -> List[int]:
+        kids = []
         for v, mv in self.mask_by_attr_val[a].items():
-            child = S & mv
-            if child != 0 and child != S:  # must be a *proper* subset to contribute
-                children.append(child)
-        # Note: if child == S for some v, then all items in S share the same value for a,
-        # which yields no split. We exclude it to avoid infinite recursion.
-        return children
+            sub = S & mv
+            if sub != 0 and sub != S:
+                kids.append(sub)
+        return kids
+
+    # Is S a leaf (|S|<=1 or no attribute yields a proper split)?
+    def _is_leaf(self, S: int) -> bool:
+        if bitcount(S) <= 1:
+            return True
+        for a in self.attrs:
+            if len(self._children(S, a)) > 1:
+                return False
+        return True
 
     @lru_cache(maxsize=None)
     def optimal_cost(self, S: int) -> float:
-        """Minimal expected number of queries from candidate mask S."""
-        size = bit_count(S)
+        """Minimal expected queries from candidate mask S."""
+        size = bitcount(S)
         if size <= 1:
             return 0.0
 
-        best_cost = float("inf")
-        best_attr = None
-
+        best = float("inf")
+        best_a = None
         for a in self.attrs:
-            parts = self._children_for_attr(S, a)
+            parts = self._children(S, a)
             if len(parts) <= 1:
-                continue  # no split or trivial split
-
-            # expected residual cost under uniform prior on S
+                continue
             exp_res = 0.0
             for child in parts:
-                exp_res += (bit_count(child) / size) * self.optimal_cost(child)
+                exp_res += (bitcount(child) / size) * self.optimal_cost(child)
             cand = 1.0 + exp_res
-            if cand < best_cost:
-                best_cost = cand
-                best_attr = a
+            if cand < best:
+                best, best_a = cand, a
 
-        if best_attr is None:
-            # No attribute can split S further (irreducible equivalence class).
+        if best_a is None:
+            # Irreducible equivalence class
             self._best_attr[S] = ""
             return 0.0
 
-        self._best_attr[S] = best_attr
-        return best_cost
+        self._best_attr[S] = best_a
+        return best
 
     def build_optimal_tree(self, S: int = None) -> Dict[str, Any]:
-        """Reconstruct the optimal decision tree as a nested dict."""
+        """Reconstruct one optimal tree."""
         if S is None:
-            S = self.root_mask
-        size = bit_count(S)
+            S = self.root
+        size = bitcount(S)
         if size <= 1:
-            return {"type": "leaf", "size": size, "ids": ids_from_mask(S, self.index2id)}
-
-        a = self._best_attr.get(S, None)
+            return {"type": "leaf", "size": size, "ids": ids_from_mask(S, self.idx2id)}
+        a = self._best_attr.get(S, "")
         if not a:
-            # irreducible leaf (equivalence class)
-            return {"type": "leaf", "size": size, "ids": ids_from_mask(S, self.index2id)}
-
-        # group children by attribute value for readability
+            return {"type": "leaf", "size": size, "ids": ids_from_mask(S, self.idx2id)}
         children = []
-        for v in self.attr_values[a]:
-            child = S & self.mask_by_attr_val[a][v]
-            if child == 0:
+        for v, mv in self.mask_by_attr_val[a].items():
+            child = S & mv
+            if child == 0 or child == S:
                 continue
-            if child == S:
-                # all items share this value; shouldn't happen if _children_for_attr filtered correctly,
-                # but guard to avoid loops
-                continue
-            subtree = self.build_optimal_tree(child)
-            children.append({"value": v, "subset_size": bit_count(child), "subtree": subtree})
-
+            children.append({
+                "value": v,
+                "subset_size": bitcount(child),
+                "subtree": self.build_optimal_tree(child)
+            })
         return {"type": "node", "attribute": a, "size": size, "children": children}
 
-# ------------------ CLI ------------------
+    # --------- New: per-turn expected candidates and entropy curves ---------
+
+    def expected_curve(self, max_turns: int = None) -> Dict[str, List[float]]:
+        """
+        Simulate the optimal policy as a distribution over states with absorbing leaves.
+        Returns dict with lists aligned by dialog turn:
+          - 'turn': [0, 1, ..., T]
+          - 'E_candidates': E[|S_t|]
+          - 'E_entropy_bits': E[log2 |S_t|]
+          - 'leaf_mass': total probability mass already at leaves by turn t
+        """
+        # Ensure policy filled
+        _ = self.optimal_cost(self.root)
+
+        def entropy_bits(S: int) -> float:
+            n = bitcount(S)
+            return 0.0 if n <= 1 else math.log2(n)
+
+        # Distribution over states at current turn: {mask -> prob}
+        dist = {self.root: 1.0}
+        turns, E_size, E_H, leaf_mass = [], [], [], []
+
+        t = 0
+        while True:
+            # Record expectations at this turn
+            turns.append(t)
+            E_size.append(sum(p * bitcount(S) for S, p in dist.items()))
+            E_H.append(sum(p * entropy_bits(S) for S, p in dist.items()))
+            leaf_mass.append(sum(p for S, p in dist.items() if self._is_leaf(S)))
+
+            # Stop if all mass is in leaves
+            if leaf_mass[-1] >= 1.0 - 1e-12:
+                break
+            if max_turns is not None and t >= max_turns:
+                break
+
+            # Push distribution one step along the optimal policy
+            next_dist: Dict[int, float] = {}
+            for S, pS in dist.items():
+                size = bitcount(S)
+                if self._is_leaf(S):
+                    # Absorbing
+                    next_dist[S] = next_dist.get(S, 0.0) + pS
+                    continue
+                a = self._best_attr.get(S, "")
+                if not a:
+                    # Treat as absorbing if no split cached (safety)
+                    next_dist[S] = next_dist.get(S, 0.0) + pS
+                    continue
+                parts = self._children(S, a)
+                for child in parts:
+                    w = pS * (bitcount(child) / size)
+                    next_dist[child] = next_dist.get(child, 0.0) + w
+            dist = next_dist
+            t += 1
+
+        return {
+            "turn": turns,
+            "E_candidates": E_size,
+            "E_entropy_bits": E_H,
+            "leaf_mass": leaf_mass
+        }
+
+# ---------------- CLI ----------------
 
 def main():
-    ap = argparse.ArgumentParser(description="Optimal k-ary oracle (DP) for OQA datasets")
-    ap.add_argument("--dataset", required=True, help="Path to dataset JSON (id -> {attr: value})")
-    ap.add_argument("--save_tree", default=None, help="Optional path to save the optimal tree JSON")
+    ap = argparse.ArgumentParser(description="Optimal k-ary oracle (DP) + per-turn curves")
+    ap.add_argument("--dataset", required=True, help="JSON: {id: {attr: value}}")
+    ap.add_argument("--save_tree", default=None, help="Optional JSON path for the optimal tree")
+    ap.add_argument("--curve_csv", default=None, help="Optional CSV path for per-turn expectations")
     args = ap.parse_args()
 
     with open(args.dataset, "r") as f:
         objects = json.load(f)
 
     oracle = KaryOracleDP(objects)
-    opt = oracle.optimal_cost(oracle.root_mask)
-
+    opt = oracle.optimal_cost(oracle.root)
     print(f"Objects: {oracle.n}, Attributes: {len(oracle.attrs)}")
     print(f"Optimal expected number of queries (uniform prior): {opt:.6f}")
 
@@ -188,6 +202,24 @@ def main():
         with open(args.save_tree, "w") as f:
             json.dump(tree, f, indent=2)
         print(f"Saved optimal tree to: {args.save_tree}")
+
+    # Per-turn curve
+    curve = oracle.expected_curve()
+    print("\nPer-turn expectations (first few rows):")
+    for i in range(min(6, len(curve['turn']))):
+        print(f"t={curve['turn'][i]:2d}  "
+              f"E[|S_t|]={curve['E_candidates'][i]:7.3f}  "
+              f"E[H_t]={curve['E_entropy_bits'][i]:6.3f} bits  "
+              f"leaf_mass={curve['leaf_mass'][i]:.3f}")
+
+    if args.curve_csv:
+        import csv
+        with open(args.curve_csv, "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["turn", "E_candidates", "E_entropy_bits", "leaf_mass"])
+            for t, n, h, m in zip(curve["turn"], curve["E_candidates"], curve["E_entropy_bits"], curve["leaf_mass"]):
+                w.writerow([t, n, h, m])
+        print(f"Saved per-turn curve to: {args.curve_csv}")
 
 if __name__ == "__main__":
     main()
