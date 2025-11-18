@@ -1,0 +1,4 @@
+This is an animal attributes dataset. I have a hidden animal in mind.
+You are allowed to ask me binary questions about the hidden animal's attributes, so you can figure out what it is.
+After receiving an answer, at each step you must print your current belief distribution and the calculated entropy drop about the possible hidden animal.
+We can stop when there are no more distinguishing attributes between the remaining options. (You are not allowed to solve this using programming.)
