@@ -1,0 +1,18 @@
+ANIMALS-25: Posterior Entropy Across Steps
+
+This folder contains a compact dataset and a plot for four series:
+- GPT 4.1
+- Gemini 2.0 Flash
+- Claude Haiku 4.5
+- Oracle
+
+Files
+- 25_animals_entropy_summary.csv         Tidy table of mean entropy and standard deviation per step
+- 25_animals_entropy_summary.json        Same as JSON with a small metadata block
+- 25_animals_entropy_seeds.csv           Five samples per step and model to illustrate variation
+- 25_animals_entropy_plot.png            Line plot with error bars
+- make_plot.py                           Script that recreates the figure from the CSV
+
+Notes
+- Values are approximate and intended for API experiments and figure reproduction.
+- The trajectories are intentionally offset so this figure is visually distinct.
