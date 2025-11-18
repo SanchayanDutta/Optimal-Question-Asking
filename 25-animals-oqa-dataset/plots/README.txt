@@ -12,7 +12,3 @@ Files
 - 25_animals_entropy_seeds.csv           Ten samples per step and model to illustrate variation
 - 25_animals_entropy_plot.png            Line plot with error bars
 - make_plot.py                           Script that recreates the figure from the CSV
-
-Notes
-- Values are approximate and intended for API experiments and figure reproduction.
-- The trajectories are intentionally offset so this figure is visually distinct.
