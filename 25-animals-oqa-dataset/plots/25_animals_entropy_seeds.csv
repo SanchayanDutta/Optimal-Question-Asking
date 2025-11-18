@@ -9,66 +9,66 @@ GPT 4.1,1,7,4.644
 GPT 4.1,1,8,4.644
 GPT 4.1,1,9,4.644
 GPT 4.1,1,10,4.644
-GPT 4.1,2,1,4.161
-GPT 4.1,2,2,4.278
-GPT 4.1,2,3,4.264
-GPT 4.1,2,4,4.362
-GPT 4.1,2,5,4.644
-GPT 4.1,2,6,4.351
-GPT 4.1,2,7,4.303
-GPT 4.1,2,8,4.328
-GPT 4.1,2,9,4.316
-GPT 4.1,2,10,4.374
-GPT 4.1,3,1,3.905
-GPT 4.1,3,2,3.343
-GPT 4.1,3,3,3.896
-GPT 4.1,3,4,3.883
-GPT 4.1,3,5,4.062
-GPT 4.1,3,6,3.887
-GPT 4.1,3,7,3.871
-GPT 4.1,3,8,3.734
-GPT 4.1,3,9,3.955
-GPT 4.1,3,10,4.112
-GPT 4.1,4,1,3.819
-GPT 4.1,4,2,3.239
-GPT 4.1,4,3,2.981
-GPT 4.1,4,4,2.92
-GPT 4.1,4,5,3.004
-GPT 4.1,4,6,3.684
-GPT 4.1,4,7,3.072
-GPT 4.1,4,8,3.144
-GPT 4.1,4,9,3.343
-GPT 4.1,4,10,3.459
-GPT 4.1,5,1,3.043
-GPT 4.1,5,2,2.771
-GPT 4.1,5,3,2.519
-GPT 4.1,5,4,2.638
-GPT 4.1,5,5,2.922
-GPT 4.1,5,6,2.683
-GPT 4.1,5,7,2.636
-GPT 4.1,5,8,3.06
-GPT 4.1,5,9,2.371
-GPT 4.1,5,10,2.526
-GPT 4.1,6,1,1.482
-GPT 4.1,6,2,1.686
-GPT 4.1,6,3,1.597
-GPT 4.1,6,4,1.403
-GPT 4.1,6,5,1.464
-GPT 4.1,6,6,1.331
-GPT 4.1,6,7,1.361
-GPT 4.1,6,8,1.472
-GPT 4.1,6,9,1.349
-GPT 4.1,6,10,1.427
-GPT 4.1,7,1,1.059
-GPT 4.1,7,2,0.925
-GPT 4.1,7,3,0.965
-GPT 4.1,7,4,1.052
-GPT 4.1,7,5,0.976
-GPT 4.1,7,6,0.983
-GPT 4.1,7,7,0.992
-GPT 4.1,7,8,1.044
-GPT 4.1,7,9,0.959
-GPT 4.1,7,10,1.049
+GPT 4.1,2,1,4.307
+GPT 4.1,2,2,4.377
+GPT 4.1,2,3,4.309
+GPT 4.1,2,4,4.213
+GPT 4.1,2,5,4.287
+GPT 4.1,2,6,4.198
+GPT 4.1,2,7,4.058
+GPT 4.1,2,8,4.501
+GPT 4.1,2,9,4.207
+GPT 4.1,2,10,4.273
+GPT 4.1,3,1,3.543
+GPT 4.1,3,2,3.552
+GPT 4.1,3,3,3.741
+GPT 4.1,3,4,3.685
+GPT 4.1,3,5,3.608
+GPT 4.1,3,6,3.624
+GPT 4.1,3,7,3.721
+GPT 4.1,3,8,3.909
+GPT 4.1,3,9,3.664
+GPT 4.1,3,10,3.694
+GPT 4.1,4,1,3.298
+GPT 4.1,4,2,3.029
+GPT 4.1,4,3,3.043
+GPT 4.1,4,4,3.163
+GPT 4.1,4,5,3.205
+GPT 4.1,4,6,3.03
+GPT 4.1,4,7,3.186
+GPT 4.1,4,8,3.325
+GPT 4.1,4,9,3.187
+GPT 4.1,4,10,3.201
+GPT 4.1,5,1,2.577
+GPT 4.1,5,2,2.444
+GPT 4.1,5,3,2.718
+GPT 4.1,5,4,2.568
+GPT 4.1,5,5,2.509
+GPT 4.1,5,6,2.483
+GPT 4.1,5,7,2.495
+GPT 4.1,5,8,2.501
+GPT 4.1,5,9,2.678
+GPT 4.1,5,10,2.558
+GPT 4.1,6,1,1.578
+GPT 4.1,6,2,1.637
+GPT 4.1,6,3,1.555
+GPT 4.1,6,4,1.527
+GPT 4.1,6,5,1.442
+GPT 4.1,6,6,1.496
+GPT 4.1,6,7,1.533
+GPT 4.1,6,8,1.644
+GPT 4.1,6,9,1.466
+GPT 4.1,6,10,1.435
+GPT 4.1,7,1,1.057
+GPT 4.1,7,2,1.009
+GPT 4.1,7,3,1.026
+GPT 4.1,7,4,0.964
+GPT 4.1,7,5,1.01
+GPT 4.1,7,6,1.027
+GPT 4.1,7,7,1.033
+GPT 4.1,7,8,0.946
+GPT 4.1,7,9,1.015
+GPT 4.1,7,10,1.01
 Gemini 2.0 Flash,1,1,4.644
 Gemini 2.0 Flash,1,2,4.644
 Gemini 2.0 Flash,1,3,4.644
@@ -79,66 +79,66 @@ Gemini 2.0 Flash,1,7,4.644
 Gemini 2.0 Flash,1,8,4.644
 Gemini 2.0 Flash,1,9,4.644
 Gemini 2.0 Flash,1,10,4.644
-Gemini 2.0 Flash,2,1,4.198
-Gemini 2.0 Flash,2,2,4.16
-Gemini 2.0 Flash,2,3,4.222
-Gemini 2.0 Flash,2,4,4.433
-Gemini 2.0 Flash,2,5,4.322
-Gemini 2.0 Flash,2,6,4.347
-Gemini 2.0 Flash,2,7,4.227
-Gemini 2.0 Flash,2,8,4.07
-Gemini 2.0 Flash,2,9,4.311
-Gemini 2.0 Flash,2,10,4.1
-Gemini 2.0 Flash,3,1,3.469
-Gemini 2.0 Flash,3,2,3.563
-Gemini 2.0 Flash,3,3,3.534
-Gemini 2.0 Flash,3,4,3.754
-Gemini 2.0 Flash,3,5,3.655
-Gemini 2.0 Flash,3,6,3.876
-Gemini 2.0 Flash,3,7,3.428
-Gemini 2.0 Flash,3,8,3.643
-Gemini 2.0 Flash,3,9,3.606
-Gemini 2.0 Flash,3,10,3.543
-Gemini 2.0 Flash,4,1,3.131
-Gemini 2.0 Flash,4,2,3.207
-Gemini 2.0 Flash,4,3,2.855
-Gemini 2.0 Flash,4,4,3.191
-Gemini 2.0 Flash,4,5,3.114
-Gemini 2.0 Flash,4,6,2.946
-Gemini 2.0 Flash,4,7,3.364
-Gemini 2.0 Flash,4,8,3.119
-Gemini 2.0 Flash,4,9,3.137
-Gemini 2.0 Flash,4,10,3.204
-Gemini 2.0 Flash,5,1,2.678
-Gemini 2.0 Flash,5,2,2.79
-Gemini 2.0 Flash,5,3,2.534
-Gemini 2.0 Flash,5,4,2.411
-Gemini 2.0 Flash,5,5,2.632
-Gemini 2.0 Flash,5,6,2.497
-Gemini 2.0 Flash,5,7,2.345
-Gemini 2.0 Flash,5,8,2.336
-Gemini 2.0 Flash,5,9,2.805
-Gemini 2.0 Flash,5,10,2.904
-Gemini 2.0 Flash,6,1,1.578
-Gemini 2.0 Flash,6,2,1.765
-Gemini 2.0 Flash,6,3,1.564
-Gemini 2.0 Flash,6,4,1.5
+Gemini 2.0 Flash,2,1,4.282
+Gemini 2.0 Flash,2,2,4.17
+Gemini 2.0 Flash,2,3,4.097
+Gemini 2.0 Flash,2,4,4.336
+Gemini 2.0 Flash,2,5,4.074
+Gemini 2.0 Flash,2,6,4.404
+Gemini 2.0 Flash,2,7,4.094
+Gemini 2.0 Flash,2,8,4.189
+Gemini 2.0 Flash,2,9,4.328
+Gemini 2.0 Flash,2,10,4.211
+Gemini 2.0 Flash,3,1,3.616
+Gemini 2.0 Flash,3,2,3.62
+Gemini 2.0 Flash,3,3,3.441
+Gemini 2.0 Flash,3,4,3.571
+Gemini 2.0 Flash,3,5,3.704
+Gemini 2.0 Flash,3,6,3.504
+Gemini 2.0 Flash,3,7,3.584
+Gemini 2.0 Flash,3,8,3.468
+Gemini 2.0 Flash,3,9,3.668
+Gemini 2.0 Flash,3,10,3.391
+Gemini 2.0 Flash,4,1,3.058
+Gemini 2.0 Flash,4,2,3.011
+Gemini 2.0 Flash,4,3,2.93
+Gemini 2.0 Flash,4,4,2.915
+Gemini 2.0 Flash,4,5,2.849
+Gemini 2.0 Flash,4,6,2.622
+Gemini 2.0 Flash,4,7,2.656
+Gemini 2.0 Flash,4,8,2.926
+Gemini 2.0 Flash,4,9,2.859
+Gemini 2.0 Flash,4,10,3.048
+Gemini 2.0 Flash,5,1,2.461
+Gemini 2.0 Flash,5,2,2.264
+Gemini 2.0 Flash,5,3,2.406
+Gemini 2.0 Flash,5,4,2.254
+Gemini 2.0 Flash,5,5,2.417
+Gemini 2.0 Flash,5,6,2.389
+Gemini 2.0 Flash,5,7,2.34
+Gemini 2.0 Flash,5,8,2.452
+Gemini 2.0 Flash,5,9,2.431
+Gemini 2.0 Flash,5,10,2.56
+Gemini 2.0 Flash,6,1,1.538
+Gemini 2.0 Flash,6,2,1.599
+Gemini 2.0 Flash,6,3,1.574
+Gemini 2.0 Flash,6,4,1.643
 Gemini 2.0 Flash,6,5,1.454
-Gemini 2.0 Flash,6,6,1.544
-Gemini 2.0 Flash,6,7,1.347
-Gemini 2.0 Flash,6,8,1.664
-Gemini 2.0 Flash,6,9,1.611
-Gemini 2.0 Flash,6,10,1.365
-Gemini 2.0 Flash,7,1,0.969
-Gemini 2.0 Flash,7,2,0.981
-Gemini 2.0 Flash,7,3,1.035
-Gemini 2.0 Flash,7,4,0.969
-Gemini 2.0 Flash,7,5,0.987
-Gemini 2.0 Flash,7,6,0.941
-Gemini 2.0 Flash,7,7,0.961
-Gemini 2.0 Flash,7,8,1.042
-Gemini 2.0 Flash,7,9,0.999
-Gemini 2.0 Flash,7,10,1.019
+Gemini 2.0 Flash,6,6,1.601
+Gemini 2.0 Flash,6,7,1.477
+Gemini 2.0 Flash,6,8,1.67
+Gemini 2.0 Flash,6,9,1.592
+Gemini 2.0 Flash,6,10,1.71
+Gemini 2.0 Flash,7,1,1.068
+Gemini 2.0 Flash,7,2,1.046
+Gemini 2.0 Flash,7,3,1.039
+Gemini 2.0 Flash,7,4,1.05
+Gemini 2.0 Flash,7,5,1.045
+Gemini 2.0 Flash,7,6,1.058
+Gemini 2.0 Flash,7,7,0.966
+Gemini 2.0 Flash,7,8,0.959
+Gemini 2.0 Flash,7,9,0.961
+Gemini 2.0 Flash,7,10,1.009
 Claude Haiku 4.5,1,1,4.644
 Claude Haiku 4.5,1,2,4.644
 Claude Haiku 4.5,1,3,4.644
@@ -149,66 +149,66 @@ Claude Haiku 4.5,1,7,4.644
 Claude Haiku 4.5,1,8,4.644
 Claude Haiku 4.5,1,9,4.644
 Claude Haiku 4.5,1,10,4.644
-Claude Haiku 4.5,2,1,4.143
-Claude Haiku 4.5,2,2,4.007
-Claude Haiku 4.5,2,3,3.884
-Claude Haiku 4.5,2,4,4.042
-Claude Haiku 4.5,2,5,3.959
-Claude Haiku 4.5,2,6,3.964
-Claude Haiku 4.5,2,7,3.948
-Claude Haiku 4.5,2,8,4.232
-Claude Haiku 4.5,2,9,4.349
-Claude Haiku 4.5,2,10,3.975
-Claude Haiku 4.5,3,1,3.377
-Claude Haiku 4.5,3,2,3.248
-Claude Haiku 4.5,3,3,3.393
-Claude Haiku 4.5,3,4,3.19
-Claude Haiku 4.5,3,5,3.287
-Claude Haiku 4.5,3,6,3.113
-Claude Haiku 4.5,3,7,3.379
-Claude Haiku 4.5,3,8,3.475
-Claude Haiku 4.5,3,9,3.391
-Claude Haiku 4.5,3,10,3.345
-Claude Haiku 4.5,4,1,2.261
-Claude Haiku 4.5,4,2,2.708
-Claude Haiku 4.5,4,3,2.763
-Claude Haiku 4.5,4,4,2.574
-Claude Haiku 4.5,4,5,2.533
-Claude Haiku 4.5,4,6,2.411
-Claude Haiku 4.5,4,7,2.356
-Claude Haiku 4.5,4,8,2.227
-Claude Haiku 4.5,4,9,2.372
-Claude Haiku 4.5,4,10,2.579
-Claude Haiku 4.5,5,1,1.855
-Claude Haiku 4.5,5,2,1.753
-Claude Haiku 4.5,5,3,1.969
-Claude Haiku 4.5,5,4,2.0
-Claude Haiku 4.5,5,5,1.779
-Claude Haiku 4.5,5,6,2.076
-Claude Haiku 4.5,5,7,1.921
-Claude Haiku 4.5,5,8,1.822
-Claude Haiku 4.5,5,9,1.936
-Claude Haiku 4.5,5,10,2.089
-Claude Haiku 4.5,6,1,1.558
-Claude Haiku 4.5,6,2,1.373
-Claude Haiku 4.5,6,3,1.773
-Claude Haiku 4.5,6,4,1.222
-Claude Haiku 4.5,6,5,1.475
-Claude Haiku 4.5,6,6,1.459
-Claude Haiku 4.5,6,7,1.232
-Claude Haiku 4.5,6,8,1.406
-Claude Haiku 4.5,6,9,1.417
-Claude Haiku 4.5,6,10,1.32
-Claude Haiku 4.5,7,1,1.061
-Claude Haiku 4.5,7,2,1.084
-Claude Haiku 4.5,7,3,0.936
-Claude Haiku 4.5,7,4,0.932
-Claude Haiku 4.5,7,5,1.023
-Claude Haiku 4.5,7,6,0.955
-Claude Haiku 4.5,7,7,0.991
-Claude Haiku 4.5,7,8,1.013
-Claude Haiku 4.5,7,9,1.082
-Claude Haiku 4.5,7,10,1.051
+Claude Haiku 4.5,2,1,4.085
+Claude Haiku 4.5,2,2,4.194
+Claude Haiku 4.5,2,3,4.128
+Claude Haiku 4.5,2,4,3.97
+Claude Haiku 4.5,2,5,4.226
+Claude Haiku 4.5,2,6,4.104
+Claude Haiku 4.5,2,7,4.126
+Claude Haiku 4.5,2,8,4.088
+Claude Haiku 4.5,2,9,4.171
+Claude Haiku 4.5,2,10,4.048
+Claude Haiku 4.5,3,1,3.378
+Claude Haiku 4.5,3,2,3.466
+Claude Haiku 4.5,3,3,3.236
+Claude Haiku 4.5,3,4,3.283
+Claude Haiku 4.5,3,5,3.469
+Claude Haiku 4.5,3,6,3.614
+Claude Haiku 4.5,3,7,3.316
+Claude Haiku 4.5,3,8,3.196
+Claude Haiku 4.5,3,9,3.345
+Claude Haiku 4.5,3,10,3.543
+Claude Haiku 4.5,4,1,2.523
+Claude Haiku 4.5,4,2,2.292
+Claude Haiku 4.5,4,3,2.377
+Claude Haiku 4.5,4,4,2.534
+Claude Haiku 4.5,4,5,2.497
+Claude Haiku 4.5,4,6,2.67
+Claude Haiku 4.5,4,7,2.588
+Claude Haiku 4.5,4,8,2.412
+Claude Haiku 4.5,4,9,2.74
+Claude Haiku 4.5,4,10,2.565
+Claude Haiku 4.5,5,1,1.762
+Claude Haiku 4.5,5,2,1.877
+Claude Haiku 4.5,5,3,1.949
+Claude Haiku 4.5,5,4,2.136
+Claude Haiku 4.5,5,5,1.955
+Claude Haiku 4.5,5,6,2.222
+Claude Haiku 4.5,5,7,1.737
+Claude Haiku 4.5,5,8,2.04
+Claude Haiku 4.5,5,9,2.042
+Claude Haiku 4.5,5,10,2.097
+Claude Haiku 4.5,6,1,1.588
+Claude Haiku 4.5,6,2,1.758
+Claude Haiku 4.5,6,3,1.494
+Claude Haiku 4.5,6,4,1.411
+Claude Haiku 4.5,6,5,1.553
+Claude Haiku 4.5,6,6,1.532
+Claude Haiku 4.5,6,7,1.583
+Claude Haiku 4.5,6,8,1.609
+Claude Haiku 4.5,6,9,1.493
+Claude Haiku 4.5,6,10,1.63
+Claude Haiku 4.5,7,1,1.004
+Claude Haiku 4.5,7,2,0.98
+Claude Haiku 4.5,7,3,1.042
+Claude Haiku 4.5,7,4,1.062
+Claude Haiku 4.5,7,5,0.972
+Claude Haiku 4.5,7,6,1.062
+Claude Haiku 4.5,7,7,0.992
+Claude Haiku 4.5,7,8,1.004
+Claude Haiku 4.5,7,9,0.995
+Claude Haiku 4.5,7,10,0.995
 Oracle,1,1,4.644
 Oracle,1,2,4.644
 Oracle,1,3,4.644
@@ -219,63 +219,63 @@ Oracle,1,7,4.644
 Oracle,1,8,4.644
 Oracle,1,9,4.644
 Oracle,1,10,4.644
-Oracle,2,1,3.587
-Oracle,2,2,3.653
-Oracle,2,3,3.659
-Oracle,2,4,3.564
-Oracle,2,5,3.566
-Oracle,2,6,3.617
-Oracle,2,7,3.618
-Oracle,2,8,3.586
-Oracle,2,9,3.585
-Oracle,2,10,3.625
-Oracle,3,1,2.701
-Oracle,3,2,2.688
-Oracle,3,3,2.734
-Oracle,3,4,2.648
-Oracle,3,5,2.659
-Oracle,3,6,2.711
-Oracle,3,7,2.678
-Oracle,3,8,2.732
-Oracle,3,9,2.699
-Oracle,3,10,2.698
-Oracle,4,1,1.469
-Oracle,4,2,1.469
-Oracle,4,3,1.491
-Oracle,4,4,1.488
-Oracle,4,5,1.435
-Oracle,4,6,1.386
-Oracle,4,7,1.476
-Oracle,4,8,1.569
-Oracle,4,9,1.595
-Oracle,4,10,1.523
-Oracle,5,1,0.957
-Oracle,5,2,1.044
-Oracle,5,3,0.991
-Oracle,5,4,1.016
-Oracle,5,5,1.007
-Oracle,5,6,1.008
-Oracle,5,7,0.989
-Oracle,5,8,0.991
-Oracle,5,9,1.023
-Oracle,5,10,1.004
-Oracle,6,1,1.0
-Oracle,6,2,1.0
-Oracle,6,3,1.0
-Oracle,6,4,1.0
-Oracle,6,5,1.0
-Oracle,6,6,1.0
-Oracle,6,7,1.0
-Oracle,6,8,1.0
-Oracle,6,9,1.0
-Oracle,6,10,1.0
-Oracle,7,1,1.0
-Oracle,7,2,1.0
-Oracle,7,3,1.0
-Oracle,7,4,1.0
-Oracle,7,5,1.0
-Oracle,7,6,1.0
-Oracle,7,7,1.0
-Oracle,7,8,1.0
-Oracle,7,9,1.0
-Oracle,7,10,1.0
+Oracle,2,1,3.569
+Oracle,2,2,3.581
+Oracle,2,3,3.585
+Oracle,2,4,3.566
+Oracle,2,5,3.674
+Oracle,2,6,3.583
+Oracle,2,7,3.56
+Oracle,2,8,3.55
+Oracle,2,9,3.654
+Oracle,2,10,3.566
+Oracle,3,1,2.75
+Oracle,3,2,2.855
+Oracle,3,3,2.779
+Oracle,3,4,2.778
+Oracle,3,5,2.782
+Oracle,3,6,2.803
+Oracle,3,7,2.659
+Oracle,3,8,2.837
+Oracle,3,9,2.768
+Oracle,3,10,2.724
+Oracle,4,1,1.401
+Oracle,4,2,1.67
+Oracle,4,3,1.461
+Oracle,4,4,1.557
+Oracle,4,5,1.601
+Oracle,4,6,1.523
+Oracle,4,7,1.532
+Oracle,4,8,1.668
+Oracle,4,9,1.505
+Oracle,4,10,1.518
+Oracle,5,1,0.88
+Oracle,5,2,1.018
+Oracle,5,3,1.043
+Oracle,5,4,0.986
+Oracle,5,5,0.971
+Oracle,5,6,0.989
+Oracle,5,7,0.891
+Oracle,5,8,0.949
+Oracle,5,9,1.185
+Oracle,5,10,0.967
+Oracle,6,1,1.076
+Oracle,6,2,1.069
+Oracle,6,3,1.032
+Oracle,6,4,1.004
+Oracle,6,5,1.033
+Oracle,6,6,1.015
+Oracle,6,7,1.062
+Oracle,6,8,0.885
+Oracle,6,9,1.025
+Oracle,6,10,1.011
+Oracle,7,1,1.007
+Oracle,7,2,1.063
+Oracle,7,3,1.025
+Oracle,7,4,1.008
+Oracle,7,5,1.019
+Oracle,7,6,1.037
+Oracle,7,7,1.006
+Oracle,7,8,1.022
+Oracle,7,9,0.921
+Oracle,7,10,0.932

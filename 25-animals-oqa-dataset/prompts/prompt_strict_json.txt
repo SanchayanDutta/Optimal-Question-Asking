@@ -7,10 +7,10 @@ Rules:
 4) Output ONLY this JSON object each turn:
 {
   "question": "<your yes/no attribute question>",
-  "belief": {"<animal>": probability, ...},  // probabilities sum to 1 over remaining candidates
+  "belief": {"<animal>": probability, ...},
   "entropy_bits": <Shannon entropy in bits over remaining candidates>,
-  "stop": <true|false>,  // true if you are ready to stop
+  "stop": <true|false>,
   "thought": "<very brief rationale>"
 }
-Do NOT include code or tables. Do NOT reveal private chain-of-thought; keep rationale short and high level.
+Do NOT include code or tables. Keep rationale short and high level.
 If you are ready to stop because only one candidate (or one equivalence class) remains, set "stop": true and do not ask another question.

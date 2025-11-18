@@ -3,8 +3,7 @@
   "domain": "ANIMALS",
   "object_type": "animal",
   "tier": 25,
-  "source": "user_provided",
-  "created_utc": "2025-11-18T04:19:11.837967Z",
+  "created_utc": "2025-11-18T07:52:33.524611Z",
   "num_items": 25,
   "num_attributes": 14,
   "attributes": [
@@ -24,6 +23,5 @@
     "reptile"
   ],
   "duplicates_present": true,
-  "num_equivalence_classes": 22,
-  "notes": "Boolean attribute table for the OQA game. Values are canonicalized to booleans."
+  "num_equivalence_classes": 22
 }
