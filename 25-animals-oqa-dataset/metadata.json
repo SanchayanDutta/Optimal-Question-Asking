@@ -1,0 +1,29 @@
+{
+  "dataset_id": "25_animals",
+  "domain": "ANIMALS",
+  "object_type": "animal",
+  "tier": 25,
+  "source": "user_provided",
+  "created_utc": "2025-11-18T04:19:11.837967Z",
+  "num_items": 25,
+  "num_attributes": 14,
+  "attributes": [
+    "amphibian",
+    "big",
+    "bird",
+    "can_fly",
+    "can_swim",
+    "carnivore",
+    "domestic",
+    "fish",
+    "has_fur",
+    "herbivore",
+    "insect",
+    "lays_eggs",
+    "mammal",
+    "reptile"
+  ],
+  "duplicates_present": true,
+  "num_equivalence_classes": 22,
+  "notes": "Boolean attribute table for the OQA game. Values are canonicalized to booleans."
+}
