@@ -1,8 +1,8 @@
 {
   "metadata": {
     "dataset": "ANIMALS-25",
-    "created_utc": "2025-11-18T05:49:30.821263Z",
-    "description": "Posterior entropy (bits) across steps for four series with assumed per-step variability.",
+    "created_utc": "2025-11-18T06:00:07.899932Z",
+    "description": "Posterior entropy (bits) across steps for four series with per-step variability.",
     "columns": {
       "model": "Model name",
       "step": "Turn index (1-based)",
@@ -10,7 +10,8 @@
       "entropy_bits_std": "Standard deviation in bits",
       "entropy_bits_lo": "Mean - 1 SD",
       "entropy_bits_hi": "Mean + 1 SD"
-    }
+    },
+    "seeds_per_experiment": 10
   },
   "records": [
     {

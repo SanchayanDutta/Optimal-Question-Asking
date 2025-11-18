@@ -9,7 +9,7 @@ This folder contains a compact dataset and a plot for four series:
 Files
 - 25_animals_entropy_summary.csv         Tidy table of mean entropy and standard deviation per step
 - 25_animals_entropy_summary.json        Same as JSON with a small metadata block
-- 25_animals_entropy_seeds.csv           Five samples per step and model to illustrate variation
+- 25_animals_entropy_seeds.csv           Ten samples per step and model to illustrate variation
 - 25_animals_entropy_plot.png            Line plot with error bars
 - make_plot.py                           Script that recreates the figure from the CSV
 
